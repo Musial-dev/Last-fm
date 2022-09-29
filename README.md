@@ -7,7 +7,7 @@ Criação de um site de musica no qual consome as APIS de artistas e albuns da l
 
 # :checkered_flag: Iniciando:
 
-git clone: para clonar o projeto em sua maquina</br> 
+git clone https://github.com/Musial-dev/last-fm.git para clonar o projeto em sua maquina</br> 
 cd last-fm  para entrar na pasta correta do projeto</br>  npm install para instalar as dependencias</br> 
 ng serve  para inicializar o projeto</br> 
 ctrl + clicar em http://localhost:4200/ para abrir o projeto 

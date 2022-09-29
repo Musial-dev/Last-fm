@@ -1,7 +1,7 @@
 # :headphones: Last.fm </br> 
 Criação de um site de musica no qual consome as APIS de artistas e albuns da last.fm </br>
 
-:hammer: Ferramentas e tecnologias: HTML, CSS, BootStrap, Angular Material e TypeScript </br>
+:hammer: Ferramentas e tecnologias: HTML, CSS, Angular Material e TypeScript </br>
 :closed_book: Documentação: https://material.angular.io/components/categories </br>
 
 Este projeto foi gerado com Angular CLI versão 14 </br>

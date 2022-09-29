@@ -3,7 +3,7 @@ Criação de um site de musica no qual consome as APIS de artistas e albuns da l
 
 :hammer: Ferramentas e tecnologias: HTML, CSS, Angular Material e TypeScript </br>
 :closed_book: Documentação: https://material.angular.io/components/categories </br>
-:hammer_and_wrench: Este projeto foi constrído com Angular CLI versão 14 </br>
+:hammer_and_wrench: Este projeto foi construído com Angular CLI versão 14 </br>
 
 # :checkered_flag: Iniciando:
 

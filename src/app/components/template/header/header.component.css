@@ -1,0 +1,19 @@
+img {
+  width: 12rem;
+  padding-top: 5px;
+}
+
+h1 {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.header {
+  justify-content: center;
+  height: 10%;
+}
+
+span {
+  display: flex;
+  align-items: center;
+}

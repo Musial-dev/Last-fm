@@ -1,0 +1,94 @@
+<div class="content">
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Pesquisar</mat-label>
+    <input matInput type="text" [(ngModel)]="searchText" />
+    <button
+      *ngIf="searchText"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="searchText = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Tipo de pesquisa</mat-label>
+    <mat-select
+      [(ngModel)]="searchType"
+      [formControl]="optionsControl"
+      required
+    >
+      <mat-option>--</mat-option>
+      <mat-option value="artist">Artista</mat-option>
+      <mat-option value="album">Álbum</mat-option>
+    </mat-select>
+    <mat-error>Por favor, escolha um tipo de pesquisa</mat-error>
+  </mat-form-field>
+  <button
+    *ngIf="optionsControl.hasError('required'); else valid"
+    class="button-p"
+    mat-raised-button
+    disabled
+  >
+    Pesquisar
+  </button>
+  <ng-template #valid>
+    <button
+      class="button-p"
+      mat-raised-button
+      color="primary"
+      (click)="search()"
+    >
+      Pesquisar
+    </button>
+  </ng-template>
+
+      <button  *ngIf="this.itens.length > 0" mat-raised-button color="accent" (click)="clear()">Limpar</button>
+
+  
+  <div *ngIf="albumView; else ArtistView">
+    <div *ngFor="let item of itens">
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title
+            ><h2>Álbum:</h2>
+            {{ item.name }}
+            <hr
+          /></mat-card-title>
+          <mat-card-subtitle
+            ><h4>Artista:</h4>
+            {{ item.artist }}</mat-card-subtitle
+          >
+          <img mat-card-md-image src="{{ item.image[3]['#text'] }}" />
+        </mat-card-title-group>
+        <mat-card-actions>
+          <a mat-raised-button color="accent" href="{{ item.url }}">VISITE</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
+  <ng-template #ArtistView>
+    <div *ngFor="let item of itens">
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title
+            ><h2>Artista:</h2>
+            {{ item.name }}
+            <hr
+          /></mat-card-title>
+          <mat-card-subtitle
+            ><h4>Ouvintes:</h4>
+            {{ item.listeners }}</mat-card-subtitle
+          >
+          <img mat-card-md-image src="{{ item.image[3]['#text'] }}" />
+        </mat-card-title-group>
+        <mat-card-actions>
+          <a mat-raised-button color="accent" href="{{ item.url }}">VISITE</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </ng-template>
+</div>
